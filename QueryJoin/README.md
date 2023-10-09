@@ -55,7 +55,12 @@ _DB University_
   ON `degrees`.`department_id` = `departments`.`id`  
   ORDER BY `students`.`surname` ASC;
 - **[5]**
-
+  SELECT \*  
+   FROM `course_teacher`  
+   INNER JOIN `courses`  
+   ON `course_teacher`.`course_id` = `courses`.`id`  
+   INNER JOIN `teachers`  
+   ON `course_teacher`.`teacher_id` = `teachers`.`id`;
 - **[6]**
 
 - **[7]**
