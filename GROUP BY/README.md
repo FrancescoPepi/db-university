@@ -24,6 +24,9 @@ _DB University **Group BY**_
   SELECT COUNT(`exam_id`) `count_exam`, AVG(`vote`) `media`  
   FROM `exam_student`  
   GROUP BY `exam_id`;
-- **[4]**
+- **[4]**  
+  SELECT COUNT(`id`) `courses`,`department_id`  
+  FROM `degrees`  
+  GROUP BY `department_id`;
 
 ## FINE
