@@ -62,15 +62,18 @@ _DB University_
    INNER JOIN `teachers`  
    ON `course_teacher`.`teacher_id` = `teachers`.`id`;
 - **[6]**  
-  SELECT \*  
+  SELECT DISTINCT `teachers`.`name`,`teachers`.`surname`,`departments`.`name`  
    FROM `teachers`  
-   INNER JOIN `courses`  
-   ON `teachers`.`id` = `courses`.`id`  
+   INNER JOIN `course_teacher`  
+   ON `course_teacher`.`teacher_id`= `teachers`.`id`  
+  INNER JOIN `courses`  
+   ON `courses`.`id` = `course_teacher`.`course_id`  
    INNER JOIN `degrees`  
-   ON `courses`.`degree_id` = `degrees`.`id`
+   ON `courses`.`degree_id` = `degrees`.`id`  
   INNER JOIN `departments`  
    ON `degrees`.`department_id` = `departments`.`id`  
-   WHERE `departments`.`name` = "Dipartimento di Matematica";
+  WHERE `departments`.`name`="Dipartimento di Matematica"  
+  ORDER BY `teachers`.`surname` ASC;
 - **[7]**
 
 ## FINE
