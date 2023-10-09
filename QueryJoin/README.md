@@ -39,7 +39,13 @@ _DB University_
   WHERE `departments`.`name`="Dipartimento di Neuroscienze" AND  
   `degrees`.`level`="magistrale";
 - **[3]**
-
+  SELECT \*  
+  FROM `course_teacher`  
+  INNER JOIN `courses`  
+  ON `course_teacher`.`course_id` = `courses`.`id`  
+  INNER JOIN `teachers`  
+  ON `course_teacher`.`teacher_id` = `teachers`.`id`  
+  WHERE `teachers`.`id`= 44;
 - **[4]**
 
 - **[5]**
