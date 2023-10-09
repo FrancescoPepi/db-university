@@ -46,8 +46,14 @@ _DB University_
   INNER JOIN `teachers`  
   ON `course_teacher`.`teacher_id` = `teachers`.`id`  
   WHERE `teachers`.`id`= 44;
-- **[4]**
-
+- **[4]**  
+  SELECT \*  
+  FROM `students`  
+  INNER JOIN `degrees`  
+  ON `students`.`degree_id` = `degrees`.`id`  
+  INNER JOIN `departments`  
+  ON `degrees`.`department_id` = `departments`.`id`  
+  ORDER BY `students`.`surname` ASC;
 - **[5]**
 
 - **[6]**
