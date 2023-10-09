@@ -31,8 +31,13 @@ _DB University_
   ON `students`.`degree_id`= `degrees`.`id`  
   WHERE `degrees`.`name`= "Corso di Laurea in Economia";
 
-- **[2]**
-
+- **[2]**  
+  SELECT \*  
+  FROM `degrees`  
+  INNER JOIN `departments`  
+  ON `degrees`.`department_id`= `departments`.`id`  
+  WHERE `departments`.`name`="Dipartimento di Neuroscienze" AND  
+  `degrees`.`level`="magistrale";
 - **[3]**
 
 - **[4]**
